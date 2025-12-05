@@ -11,7 +11,6 @@
     eza
     zoxide
     atuin
-    jenv
   ];
 
   # Let Home Manager install and manage itself.

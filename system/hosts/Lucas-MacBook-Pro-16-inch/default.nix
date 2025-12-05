@@ -10,9 +10,15 @@
   # programs.fish.enable = true;
   programs.zsh.enable = true;
 
+  homebrew = {
+    enable = true;
+    brews = [ "jenv" ];
+  };
+
   # System settings
   system.stateVersion = 6;
   nixpkgs.hostPlatform = "aarch64-darwin";
+  system.primaryUser = "lucadibello";
 
   users.users.lucadibello = {
     home = "/Users/lucadibello";
