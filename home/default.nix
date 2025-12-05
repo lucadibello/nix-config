@@ -9,6 +9,7 @@
     ./atuin.nix
     ./zoxide.nix
     ./fzf.nix
+    ./ghostty.nix
   ];
 
   home = {
