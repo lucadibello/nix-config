@@ -8,8 +8,8 @@ ZSH_THEME=""
 plugins=(
   git
   vi-mode
-  tmux
 )
+# tmux
 
 # Tmux plugin behavior
 ZSH_TMUX_AUTOSTART="true"
