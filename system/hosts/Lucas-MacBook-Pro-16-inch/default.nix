@@ -14,5 +14,8 @@
   system.stateVersion = 6;
   nixpkgs.hostPlatform = "aarch64-darwin";
 
-  users.users.lucadibello.home = "/Users/lucadibello";
+  users.users.lucadibello = {
+    home = "/Users/lucadibello";
+    uid = 501;
+  };
 }
