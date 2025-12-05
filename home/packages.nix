@@ -3,6 +3,10 @@
   home = {
     stateVersion = "25.11";
     packages = with pkgs; [
+      zsh
+      bash
+      coreutils
+      ghostty-bin # darwin variant
       tmux
       neovim
       starship
@@ -21,6 +25,7 @@
       lazydocker
       maven
       pandoc
+      nodejs_24
     ];
   };
 }

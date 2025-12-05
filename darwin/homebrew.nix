@@ -24,7 +24,6 @@
       # dev
       "android-studio"
       "docker-desktop"
-      "ghostty"
       "visual-studio-code"
       "warp"
       "zed"
