@@ -52,8 +52,6 @@
 
     # -- Custom Bindings & Extra Config --
     extraConfig = ''
-      set-environment -g PATH "~/.nix-profile/bin:/etc/profiles/per-user/lucadibello/bin:/run/current-system/sw/bin:/nix/var/nix/profiles/default/bin:/opt/homebrew/bin:/bin:/usr/bin"
-
       # Terminal features
       set -sag terminal-features ",*:RGB"
       set -sag terminal-features ",*:usstyle"
@@ -107,9 +105,6 @@
       bind -r C-h previous-window
       bind -r C-l next-window
       bind Tab last-window
-
-      # Clear screen
-      bind -n C-l send-keys C-l \; run 'sleep 0.2' \; clear-history
 
       # -- Copy Mode --
       bind Enter copy-mode
