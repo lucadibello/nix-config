@@ -3,6 +3,7 @@
   xdg = {
     configFile = {
       "ghostty/config".source = ../config/ghostty/config;
+      "ghostty/shaders/cursor_blaze.glsl".source = ../config/ghostty/shaders/cursor_blaze.glsl;
     };
   };
 }
