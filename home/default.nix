@@ -6,6 +6,9 @@
     ./zsh.nix
     ./starship.nix
     ./tmux.nix
+    ./atuin.nix
+    ./zoxide.nix
+    ./fzf.nix
   ];
 
   home = {
