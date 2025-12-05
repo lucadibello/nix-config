@@ -23,12 +23,15 @@
           # Ensure Nix-provided tmux and tools are on PATH for run-shell hooks
           set-environment -g PATH "/Users/lucadibello/.nix-profile/bin:/etc/profiles/per-user/lucadibello/bin:/run/current-system/sw/bin:/nix/var/nix/profiles/default/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Ghostty.app/Contents/MacOS"
 
+          # Fix bug - allow to rename windows
+          # Source: https://github.com/catppuccin/tmux/issues/53#issuecomment-2455232297
+          set -ogq @catppuccin_window_text " #W"
+          set -ogq @catppuccin_window_current_text " #W"
+
           set -g @catppuccin_flavour "mocha"
           set -g @catppuccin_window_status_style "rounded"
         '';
       }
-      yank
-      copycat
       {
         plugin = cpu;
         extraConfig = ''
@@ -50,7 +53,10 @@
           set -ag status-right "#{E:@catppuccin_status_session}"
         '';
       }
+      yank
+      copycat
       tmux-fzf
+      pain-control
     ];
 
     # -- Custom Bindings & Extra Config --
@@ -59,10 +65,6 @@
       set -sag terminal-features ",*:RGB"
       set -sag terminal-features ",*:usstyle"
       set -g allow-passthrough on
-
-      # Fix bug - allow to rename windows
-      # Source: https://github.com/catppuccin/tmux/issues/53#issuecomment-2455232297
-      set -g @catppuccin_window_text "#W"
 
       # General behavior
       set -sg repeat-time 600
