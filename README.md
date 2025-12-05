@@ -1,6 +1,6 @@
 # Luca’s nix-darwin config
 
-Modern rewrite of my old dotfiles ([lucadibello/dotfiles](https://github.com/lucadibello/dotfiles)), now fully managed with Nix flakes + nix-darwin + home-manager. It provisions my personal macOS setup (shell, CLI tools, GUI apps, window manager, terminal/tmux, Git identity) in a reproducible way.
+Modern rewrite of my old dotfiles ([lucadibello/dotfiles](https://github.com/lucadibello/dotfiles)), now fully managed with [Nix](https://nixos.org/) flakes + [nix-darwin](https://github.com/nix-darwin/nix-darwin) + [home-manager](https://github.com/nix-community/home-manager). It provisions my personal macOS setup (shell, CLI tools, GUI apps, window manager, terminal/tmux, Git identity) in a reproducible way.
 
 ## What’s inside
 - `flake.nix`: entrypoint targeting host `Lucas-MacBook-Pro-16-inch` (aarch64-darwin) with shared modules and host overrides.
