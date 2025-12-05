@@ -11,6 +11,12 @@
     eza
     zoxide
     atuin
+    codex
+    tmuxinator
+    gemini-cli
+    statix # linter / formatter for nix lang
+    lazygit
+    lazydocker
   ];
 
   # Let Home Manager install and manage itself.
@@ -36,6 +42,6 @@
       # Add common aliases if not in zshrc, or let zshrc handle them.
       # For now, we will rely on initExtra to pull from zshrc.
     };
-    initExtra = builtins.readFile ../../config/zshrc;
+    initContent = builtins.readFile ../../config/zshrc;
   };
 }

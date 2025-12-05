@@ -13,6 +13,14 @@
   homebrew = {
     enable = true;
     brews = [ "jenv" ];
+    casks = [
+      "shortcat"
+      "chatgpt"
+      "anki"
+      "whatsapp"
+      "aerospace"
+      "ghostty"
+    ];
   };
 
   # System settings
