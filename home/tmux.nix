@@ -11,37 +11,58 @@
     # -- Prefix & Mouse --
     shortcut = "b";
     mouse = true;
-    keyMode = "emacs";
+    keyMode = "vi";
     customPaneNavigationAndResize = true;
 
     # -- Plugins --
-    # Nix manages these, replacing TPM
     plugins = with pkgs.tmuxPlugins; [
-      #   # Catppuccin Theme
-      #   {
-      #     plugin = catppuccin;
-      #     extraConfig = ''
-      #       set -g @catppuccin_flavour "mocha"
-      #       set -g @catppuccin_window_status_style "rounded"
-      #     '';
-      #   }
-      #   cpu
-      #   battery
+      # Catppuccin Theme
+      {
+        plugin = catppuccin;
+        extraConfig = ''
+          # Ensure Nix-provided tmux and tools are on PATH for run-shell hooks
+          set-environment -g PATH "/Users/lucadibello/.nix-profile/bin:/etc/profiles/per-user/lucadibello/bin:/run/current-system/sw/bin:/nix/var/nix/profiles/default/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Ghostty.app/Contents/MacOS"
+
+          set -g @catppuccin_flavour "mocha"
+          set -g @catppuccin_window_status_style "rounded"
+        '';
+      }
       yank
-      #   copycat
-      #   pain-control
-      #   tmux-fzf
+      copycat
+      {
+        plugin = cpu;
+        extraConfig = ''
+          # clear previous status
+          set -g status-left ""
+          set -g status-right ""
+
+          # Catppuccin status bar
+          set -g status-right-length 100
+          set -g status-left-length 100
+          set -agF status-right "#{E:@catppuccin_status_cpu}"
+        '';
+      }
+      {
+        plugin = battery;
+        extraConfig = ''
+          set -agF status-right "#{E:@catppuccin_status_battery}"
+          # Finish Catppuccin status bar
+          set -ag status-right "#{E:@catppuccin_status_session}"
+        '';
+      }
+      tmux-fzf
     ];
 
     # -- Custom Bindings & Extra Config --
     extraConfig = ''
-      # Ensure Nix-provided tmux and tools are on PATH for run-shell hooks
-      set-environment -g PATH "/opt/homebrew/bin:/opt/homebrew/sbin:/Users/lucadibello/.nix-profile/bin:/etc/profiles/per-user/lucadibello/bin:/run/current-system/sw/bin:/nix/var/nix/profiles/default/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Ghostty.app/Contents/MacOS"
-
       # Terminal features
       set -sag terminal-features ",*:RGB"
       set -sag terminal-features ",*:usstyle"
       set -g allow-passthrough on
+
+      # Fix bug - allow to rename windows
+      set -g @catppuccin_window_default_text "#W"
+      set -g @catppuccin_window_current_text "#W"
 
       # General behavior
       set -sg repeat-time 600
@@ -56,7 +77,6 @@
       set -g visual-activity off
       set -g aggressive-resize on
       set -g automatic-rename-format "#{pane_current_command}"
-
 
       # Create new session
       bind C-c new-session
@@ -91,18 +111,6 @@
       bind b list-buffers
       bind p paste-buffer -p
       bind P choose-buffer
-
-      # Catppuccin status bar
-      set -g status-right-length 100
-      set -g status-left-length 100
-      set -g status-left ""
-      set -agF status-right "#{E:@catppuccin_status_cpu}"
-      set -agF status-right "#{E:@catppuccin_status_battery}"
-      set -ag status-right "#{E:@catppuccin_status_session}"
     '';
   };
-
-  # create symlink to tmux.conf in home config
-  # home.file.".tmux.conf".source =
-  #   config.lib.file.mkOutOfStoreSymlink "${config.xdg.configHome}/tmux/tmux.conf";
 }

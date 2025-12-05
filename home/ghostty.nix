@@ -18,8 +18,8 @@
       theme = "Github Dark";
       background-opacity = 0.95;
 
-      # use tmux from the Nix profile
-      initial-command = "tmux new-session -A -s core";
+      # Intialize tmux session named 'core'
+      initial-command = "${pkgs.tmux}/bin/tmux new-session -A -s core";
 
       # Enable font features font-feature = calt
       font-feature = [
