@@ -1,7 +1,9 @@
 { pkgs, ... }:
 {
   # Use repo-relative path so it works regardless of where the repo is checked out
-  # imports = [ ../../darwin/aerospace.nix ];
+  imports = [
+    ../../darwin/aerospace.nix
+  ];
 
   # List packages installed in system profile.
   environment.systemPackages = [
@@ -27,7 +29,6 @@
       "chatgpt"
       "anki"
       "whatsapp"
-      "aerospace"
       "ghostty"
     ];
   };

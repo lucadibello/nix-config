@@ -4,6 +4,7 @@
     stateVersion = "24.11";
     packages = with pkgs; [
       tmux
+      aerospace
       neovim
       starship
       ripgrep
@@ -38,14 +39,14 @@
   };
 
   # Hoem files (in home directory ~)
-  home.file = {
-    ".tmux.conf".source = ../../config/tmux.conf;
-    ".aerospace.toml".source = ../../config/aerospace.toml;
-  };
+  # home.file = {
+  #   ".tmux.conf".source = ../../config/tmux.conf;
+  #   ".aerospace.toml".source = ../../config/aerospace.toml;
+  # };
 
-  programs.zsh = {
-    enable = true;
-    shellAliases = { };
-    initContent = builtins.readFile ../../config/zshrc;
-  };
+  # Extra modules shared across hosts
+  imports = [
+    ../../generic/zsh.nix
+    ../../generic/tmux.nix
+  ];
 }

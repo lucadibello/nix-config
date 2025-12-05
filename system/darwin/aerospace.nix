@@ -1,4 +1,3 @@
-{ pkgs, ... }:
 {
   services.aerospace = {
     enable = true;
@@ -116,74 +115,72 @@
           # toggle service mode (allows to join windows, flatten workspace tree, etc. using a different set of keys)
           alt-shift-semicolon = "mode service";
         };
-        "service-binding" = {
-          # exit service mode
-          esc = [
-            "reload-config"
-            "mode main"
-          ];
-          # reset current workspace
-          r = [
-            "flatten-workspace-tree"
-            "mode main"
-          ]; # reset layout
-          # set window as floating
-          f = [
-            "layout floating tiling"
-            "mode main"
-          ];
-          # close / hide windows
-          w = [
-            "close"
-            "mode main"
-          ];
-          m = [ "macos-native-minimize" ];
-          backspace = [
-            "close-all-windows-but-current"
-            "mode main"
-          ];
-          # join trees in different directions
-          "alt-shift-h" = [
-            "join-with left"
-            "mode main"
-          ];
-          "alt-shift-j" = [
-            "join-with down"
-            "mode main"
-          ];
-          "alt-shift-k" = [
-            "join-with up"
-            "mode main"
-          ];
-          "alt-shift-l" = [
-            "join-with right"
-            "mode main"
-          ];
-          # control volume
-          up = [ "volume up" ];
-          down = [ "volume down" ];
-        };
-        "resize-binding" = {
-          # vim motion keys
-          h = "resize width -50";
-          l = "resize width +50";
-          j = "resize height +50";
-          k = "resize height -50";
-          # arrow keys
-          left = "resize width -50";
-          right = "resize width +50";
-          down = "resize height +50";
-          up = "resize height -50";
-          # exit mode (two keybindings)
-          esc = "mode main";
-          enter = "mode main";
-        };
       };
 
-      # ------------------------------------------------------------------
-      # WINDOW DETECTION RULES (Fixed: 'if' is a reserved keyword, so it must be quoted)
-      # ------------------------------------------------------------------
-      "on-window-detected" = [
+      mode.service.binding = {
+        # exit service mode
+        esc = [
+          "reload-config"
+          "mode main"
+        ];
+        # reset current workspace
+        r = [
+          "flatten-workspace-tree"
+          "mode main"
+        ]; # reset layout
+        # set window as floating
+        f = [
+          "layout floating tiling"
+          "mode main"
+        ];
+        # close / hide windows
+        w = [
+          "close"
+          "mode main"
+        ];
+        m = [ "macos-native-minimize" ];
+        backspace = [
+          "close-all-windows-but-current"
+          "mode main"
+        ];
+        # join trees in different directions
+        "alt-shift-h" = [
+          "join-with left"
+          "mode main"
+        ];
+        "alt-shift-j" = [
+          "join-with down"
+          "mode main"
+        ];
+        "alt-shift-k" = [
+          "join-with up"
+          "mode main"
+        ];
+        "alt-shift-l" = [
+          "join-with right"
+          "mode main"
+        ];
+        # control volume
+        up = [ "volume up" ];
+        down = [ "volume down" ];
+      };
+
+      mode.resize.binding = {
+        # vim motion keys
+        h = "resize width -50";
+        l = "resize width +50";
+        j = "resize height +50";
+        k = "resize height -50";
+        # arrow keys
+        left = "resize width -50";
+        right = "resize width +50";
+        down = "resize height +50";
+        up = "resize height -50";
+        # exit mode (two keybindings)
+        esc = "mode main";
+        enter = "mode main";
+      };
+      on-window-detected = [
         # ---------- Browsers → workspace B ----------
         {
           "if" = {

@@ -10,9 +10,15 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager }: {
-    darwinConfigurations."Lucas-MacBook-Pro-16-inch" =
-      nix-darwin.lib.darwinSystem {
+  outputs =
+    inputs@{
+      self,
+      nix-darwin,
+      nixpkgs,
+      home-manager,
+    }:
+    {
+      darwinConfigurations."Lucas-MacBook-Pro-16-inch" = nix-darwin.lib.darwinSystem {
         modules = [
           ./system/hosts/Lucas-MacBook-Pro-16-inch/default.nix
 
@@ -20,13 +26,11 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.lucadibello =
-              import ./system/hosts/Lucas-MacBook-Pro-16-inch/home.nix;
+            home-manager.users.lucadibello = import ./system/hosts/Lucas-MacBook-Pro-16-inch/home.nix;
           }
         ];
       };
 
-    darwinPackages = self.darwinConfigurations."Lucas-MacBook-Pro-16-inch".pkgs;
-  };
+      darwinPackages = self.darwinConfigurations."Lucas-MacBook-Pro-16-inch".pkgs;
+    };
 }
-
