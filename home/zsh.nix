@@ -12,16 +12,5 @@
         "nix-switch" = "sudo darwin-rebuild switch --flake ~/Developer/nix-config";
       };
     };
-
-    starship = {
-      enable = true;
-      settings = {
-        add_newline = false;
-        character = {
-          success_symbol = "[λ](bold green)";
-          error_symbol = "[λ](bold red)";
-        };
-      };
-    };
   };
 }

@@ -3,7 +3,8 @@
   imports = [
     ./git.nix
     ./packages.nix
-    ./shell.nix
+    ./zsh.nix
+    ./starship.nix
     ./tmux.nix
   ];
 
