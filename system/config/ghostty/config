@@ -9,7 +9,8 @@ theme = Github Dark
 background-opacity = 0.95
 
 # setup tmux entrypoint
-command = tmux new-session -A -s core
+# use tmux from the Nix profile (Homebrew path is absent)
+command = /etc/profiles/per-user/lucadibello/bin/tmux new-session -A -s core
 
 # ghostty behavior
 window-save-state = default

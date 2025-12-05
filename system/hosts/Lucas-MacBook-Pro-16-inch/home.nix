@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   home = {
     stateVersion = "24.11";
     packages = with pkgs; [
@@ -33,22 +34,18 @@
       "ghostty/config".source = ../../config/ghostty/config;
       "borders/bordersrc".source = ../../config/borders/bordersrc;
       "zathura/zathurarc".source = ../../config/zathura/zathurarc;
-      "tmux/tmux-attach.sh".source = ../../config/ghostty/tmux-attach.sh;
     };
   };
 
   # Hoem files (in home directory ~)
   home.file = {
     ".tmux.conf".source = ../../config/tmux.conf;
-    # ".aerospace.toml".source = ../../config/aerospace.toml;
+    ".aerospace.toml".source = ../../config/aerospace.toml;
   };
 
   programs.zsh = {
     enable = true;
-    shellAliases = {
-      # Add common aliases if not in zshrc, or let zshrc handle them.
-      # For now, we will rely on initExtra to pull from zshrc.
-    };
+    shellAliases = { };
     initContent = builtins.readFile ../../config/zshrc;
   };
 }
