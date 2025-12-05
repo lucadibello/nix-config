@@ -61,8 +61,8 @@
       set -g allow-passthrough on
 
       # Fix bug - allow to rename windows
-      set -g @catppuccin_window_default_text "#W"
-      set -g @catppuccin_window_current_text "#W"
+      # Source: https://github.com/catppuccin/tmux/issues/53#issuecomment-2455232297
+      set -g @catppuccin_window_text "#W"
 
       # General behavior
       set -sg repeat-time 600
