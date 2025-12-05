@@ -6,14 +6,14 @@
       autosuggestion.enable = true;
       syntaxHighlighting.enable = true;
 
-      # oh-my-zsh = {
-      #   enable = true;
-      #   plugins = [
-      #     "git"
-      #     "vi-mode"
-      #     "tmux"
-      #   ];
-      # };
+      oh-my-zsh = {
+        enable = true;
+        plugins = [
+          "git"
+          "vi-mode"
+          "tmux"
+        ];
+      };
 
       shellAliases = {
         la = "ls -la";
