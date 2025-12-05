@@ -24,7 +24,7 @@ Modern rewrite of my old dotfiles ([lucadibello/dotfiles](https://github.com/luc
 
 ## Managing and customizing
 - Packages: edit `home/packages.nix` for CLI tools; GUI/casks live in `darwin/homebrew.nix`.
-- Shell & prompt: tweak `home/zsh.nix` and `home/starship.nix`; aliases include `nix-switch` for updating the system.
+- Shell & prompt: tweak `home/zsh.nix` (zsh + oh-my-zsh with `git`, `vi-mode`, `tmux` plugins) and `home/starship.nix`; aliases include `nix-switch` for updating the system.
 - Window management: `darwin/services.nix` configures AeroSpace with `alt`-centric bindings (tiles/accordion layouts, workspaces A–Z, Ghostty launcher on `alt-enter`).
 - Terminal: `home/ghostty.nix` sets font/theme, enables zsh integration, and auto-starts a `tmux` session.
 - System defaults: adjust Finder/keyboard/loginwindow options in `darwin/system.nix` and env in `darwin/settings.nix`.
