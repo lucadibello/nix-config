@@ -1,40 +1,47 @@
 { pkgs, ... }: {
-  home.stateVersion = "24.11";
-
-  home.packages = with pkgs; [
-    tmux
-    neovim
-    starship
-    ripgrep
-    fzf
-    bat
-    eza
-    zoxide
-    atuin
-    codex
-    tmuxinator
-    gemini-cli
-    statix # linter / formatter for nix lang
-    lazygit
-    lazydocker
-  ];
+  home = {
+    stateVersion = "24.11";
+  packages = with pkgs; [
+      tmux
+      neovim
+      starship
+      ripgrep
+      fzf
+      bat
+      eza
+      zoxide
+      atuin
+      codex
+      tmuxinator
+      gemini-cli
+      statix # linter / formatter for nix lang
+      nixfmt # formatter for nix lang
+      lazygit
+      lazydocker
+      maven
+      pandoc
+    ];
+  };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
-  # Configuration files
-  # xdg.configFile."fish/config.fish".source = ../../config/fish/config.fish;
-  xdg.configFile."starship.toml".source = ../../config/starship.toml;
-  xdg.configFile."ghostty/config".source = ../../config/ghostty/config;
-  xdg.configFile."borders/bordersrc".source = ../../config/borders/bordersrc;
-  xdg.configFile."zathura/zathurarc".source = ../../config/zathura/zathurarc;
-  
-  # Map ghostty's tmux-attach.sh to where ghostty expects it
-  xdg.configFile."tmux/tmux-attach.sh".source = ../../config/ghostty/tmux-attach.sh;
+  # Configuration files (.config)
+  xdg = {
+    configFile = {
+      "starship.toml".source = ../../config/starship.toml;
+      "ghostty/config".source = ../../config/ghostty/config;
+      "borders/bordersrc".source = ../../config/borders/bordersrc;
+      "zathura/zathurarc".source = ../../config/zathura/zathurarc;
+      "tmux/tmux-attach.sh".source = ../../config/ghostty/tmux-attach.sh;
+    };
+  };
 
-  home.file.".tmux.conf".source = ../../config/tmux.conf;
-  home.file.".aerospace.toml".source = ../../config/aerospace.toml;
-  # home.file.".zshrc".source = ../../config/zshrc; # Managed by programs.zsh
+  # Hoem files (in home directory ~)
+  home.file = {
+    ".tmux.conf".source = ../../config/tmux.conf;
+    ".aerospace.toml".source = ../../config/aerospace.toml;
+  };
 
   programs.zsh = {
     enable = true;
