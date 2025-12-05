@@ -9,7 +9,7 @@ theme = Github Dark
 background-opacity = 0.95
 
 # setup tmux entrypoint
-command = /opt/homebrew/bin/tmux new-session -A -s core
+command = tmux new-session -A -s core
 
 # ghostty behavior
 window-save-state = default

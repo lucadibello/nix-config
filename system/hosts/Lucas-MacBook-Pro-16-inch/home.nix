@@ -1,7 +1,7 @@
 { pkgs, ... }: {
   home = {
     stateVersion = "24.11";
-  packages = with pkgs; [
+    packages = with pkgs; [
       tmux
       neovim
       starship
@@ -40,7 +40,7 @@
   # Hoem files (in home directory ~)
   home.file = {
     ".tmux.conf".source = ../../config/tmux.conf;
-    ".aerospace.toml".source = ../../config/aerospace.toml;
+    # ".aerospace.toml".source = ../../config/aerospace.toml;
   };
 
   programs.zsh = {
