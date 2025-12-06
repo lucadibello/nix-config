@@ -1,4 +1,5 @@
 {
+  config,
   inputs,
   self,
   primaryUser,
@@ -14,7 +15,8 @@
       ];
     };
     extraSpecialArgs = {
-      inherit inputs self primaryUser config;
+      inherit inputs self primaryUser;
+      darwinConfig = config;
     };
   };
 }
