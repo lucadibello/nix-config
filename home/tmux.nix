@@ -68,6 +68,7 @@
 
       # General behavior
       set -sg repeat-time 600
+      set -sg escape-time 0
       set -s focus-events on
       setw -g automatic-rename on
       set -g renumber-windows on
