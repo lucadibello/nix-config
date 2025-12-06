@@ -10,7 +10,7 @@
     watchIdAuth = true;
   };
 
-  # Install steam, intellij 2024.1
+  # Install steam
   homebrew = {
     enable = true;
     casks = [
