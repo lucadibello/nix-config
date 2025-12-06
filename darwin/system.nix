@@ -1,4 +1,4 @@
-{
+{primaryUser}: {
   # Add ability to used TouchID for sudo authentication
   security.pam.services.sudo_local = {
     enable = true;
@@ -10,7 +10,7 @@
   # MacOS system settings
   system = {
     stateVersion = 6;
-    primaryUser = "lucadibello";
+    primaryUser = "${primaryUser}";
 
     keyboard = {
       enableKeyMapping = true;
@@ -40,8 +40,8 @@
     };
   };
 
-  users.users.lucadibello = {
-    home = "/Users/lucadibello";
+  users.users.${primaryUser} = {
+    home = "/Users/${primaryUser}";
     uid = 501;
   };
 }
