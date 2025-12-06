@@ -3,6 +3,7 @@
   imports = [
     ./git.nix
     ./packages.nix
+    ./sdkman.nix
     ./zsh.nix
     ./starship.nix
     ./tmux.nix
