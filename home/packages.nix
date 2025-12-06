@@ -37,6 +37,7 @@
       maven
       pandoc
       nodejs_24
+      jdk21_headless
 
       # --- System Monitoring ---
       btop

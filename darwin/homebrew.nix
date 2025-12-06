@@ -6,7 +6,6 @@
       upgrade = true;
       cleanup = "zap";
     };
-    brews = [ "jenv" ];
     casks = [
       # social
       "microsoft-teams"
