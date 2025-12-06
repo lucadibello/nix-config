@@ -22,11 +22,6 @@
         gcof = "git branch -a --sort=-committerdate | fzf --tac | sed 's/\\*//' | sed 's/remotes\/origin\///' | tr -d ' ' | xargs git checkout";
         gg = "git log --all --decorate --oneline --graph";
       };
-
-      # FIXME: find bettwer solution to source the theme
-      # initContent = ''
-      #    tmux source-file ~/.config/tmux/tmux.conf
-      # '';
     };
   };
 }
