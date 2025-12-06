@@ -1,3 +1,4 @@
+{ lib, ... }:
 {
   networking.hostName = "Lucas-Mac-mini";
 
@@ -5,7 +6,17 @@
   security.pam.services.sudo_local = {
     enable = true;
     reattach = true;
-    touchIdAuth = false; # not available on Mac Mini
+    touchIdAuth = lib.mkForce false; # I don't have a touch ID sensor on my Mac Mini
     watchIdAuth = true;
+  };
+
+  # Install steam, intellij 2024.1
+  homebrew = {
+    enable = true;
+    casks = [
+      # gaming
+      "steam"
+      "roblox"
+    ];
   };
 }

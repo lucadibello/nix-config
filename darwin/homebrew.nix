@@ -12,9 +12,12 @@
       "microsoft-teams"
       "whatsapp"
 
+      # academic writing
+      "quarto"
+
       # utility
       "anki"
-      "mactex-no-gui"
+      "basictex"
       "nextcloud"
       "notion"
       "shortcat"

@@ -33,11 +33,11 @@
         ];
         specialArgs = { inherit inputs self primaryUser; };
       };
-      darwinConfigurations."Lucas-Mac-mini" = nix-darwin.lib.darwinSystem {
+      darwinConfigurations."Lucas-Mac-Mini" = nix-darwin.lib.darwinSystem {
         system = "aarch64-darwin";
         modules = [
           ./darwin # home manager + default configs
-          ./hosts/Lucas-Mac-mini/configuration.nix # Mac Mini configuration
+          ./hosts/Lucas-Mac-Mini/configuration.nix # Mac Mini configuration
         ];
         specialArgs = { inherit inputs self primaryUser; };
       };
