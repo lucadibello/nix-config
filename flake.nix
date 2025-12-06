@@ -31,7 +31,15 @@
           ./darwin # home manager + default configs
           ./hosts/Lucas-MacBook-Pro-16-inch/configuration.nix # laptop configuration
         ];
-        specialArgs = { inherit inputs self primaryUser; };
+        specialArgs = { inherit inputs self primaryUser config; };
+      };
+      darwinConfigurations."Lucas-Mac-mini" = nix-darwin.lib.darwinSystem {
+        system = "aarch64-darwin";
+        modules = [
+          ./darwin # home manager + default configs
+          ./hosts/Lucas-Mac-mini/configuration.nix # Mac Mini configuration
+        ];
+        specialArgs = { inherit inputs self primaryUser config; };
       };
     };
 }

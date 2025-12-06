@@ -18,7 +18,7 @@
       shellAliases = {
         la = "ls -la";
         ".." = "cd ..";
-        "nix-switch" = "sudo darwin-rebuild switch --flake ~/Developer/nix-config";
+        "nix-switch" = "sudo darwin-rebuild switch --flake ~/Developer/nix-config#.${config.networking.hostName}";
         gcof = "git branch -a --sort=-committerdate | fzf --tac | sed 's/\\*//' | sed 's/remotes\/origin\///' | tr -d ' ' | xargs git checkout";
         gg = "git log --all --decorate --oneline --graph";
       };
