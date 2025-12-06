@@ -1,6 +1,6 @@
 { lib, ... }:
 {
-  networking.hostName = "Lucas-Mac-mini";
+  networking.hostName = "Lucas-Mac-Mini";
 
   # override default darwin settings
   security.pam.services.sudo_local = {
