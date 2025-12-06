@@ -7,6 +7,11 @@
       zsh
       bash
       coreutils
+      unzip
+      zip
+      gnutar
+      gnused
+      curl
 
       # --- Terminal Experience ---
       ghostty-bin
