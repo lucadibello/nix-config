@@ -13,6 +13,7 @@
       gnused
       curl
       fd
+      go-task
 
       # --- Terminal Experience ---
       ghostty-bin
