@@ -12,6 +12,7 @@
       gnutar
       gnused
       curl
+      fd
 
       # --- Terminal Experience ---
       ghostty-bin
