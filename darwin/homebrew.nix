@@ -23,6 +23,9 @@
       "utm"
       "zotero"
 
+      # tools
+      "logi-options+"
+
       # dev
       "android-studio"
       "docker-desktop"
