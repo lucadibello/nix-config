@@ -25,6 +25,7 @@
       primaryUser = "lucadibello";
     in
     {
+      # configure macOS systems
       darwinConfigurations."Lucas-MacBook-Pro-16-inch" = nix-darwin.lib.darwinSystem {
         system = "aarch64-darwin";
         modules = [
@@ -42,4 +43,5 @@
         specialArgs = { inherit inputs self primaryUser; };
       };
     };
+
 }

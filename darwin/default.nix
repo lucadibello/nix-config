@@ -22,6 +22,9 @@
     };
   };
 
+  # Allow the unfree packages we explicitly include (e.g. claude-code).
+  nixpkgs.config.allowUnfree = true;
+
   # enable nix-index for faster searching of packages
   programs.nix-index.enable = true;
 }
