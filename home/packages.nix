@@ -52,6 +52,7 @@
       # --- AI Tools ---
       codex
       gemini-cli
+      claude-code
     ];
   };
 }

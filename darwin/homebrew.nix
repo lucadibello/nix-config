@@ -32,6 +32,7 @@
 
       # ai
       "chatgpt"
+      "claude"
 
       # browsers
       "zen"
