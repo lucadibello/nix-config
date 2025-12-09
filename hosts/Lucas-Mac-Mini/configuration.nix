@@ -17,6 +17,9 @@
       # gaming
       "steam"
       "roblox"
+
+      # tools
+      "logi-options+"
     ];
   };
 }
