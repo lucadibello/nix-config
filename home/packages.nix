@@ -13,7 +13,7 @@
       gnused
       curl
       fd
-      go-task
+      bc
 
       # --- Terminal Experience ---
       ghostty-bin
@@ -31,6 +31,7 @@
       eza
       zoxide
       atuin
+      go-task
 
       # --- Nix Tooling ---
       statix
