@@ -4,6 +4,7 @@
     ./git.nix
     ./packages.nix
     ./sdkman.nix
+    ./fnm.nix
     ./zsh.nix
     ./starship.nix
     ./tmux.nix

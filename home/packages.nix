@@ -44,7 +44,6 @@
       # --- Runtimes, Build Tools & Documentation ---
       maven
       pandoc
-      nodejs_24
       jdk21_headless
 
       # --- System Monitoring ---
@@ -54,6 +53,9 @@
       codex
       gemini-cli
       claude-code
+
+      # --- Package Managers ---
+      fnm
     ];
   };
 }
