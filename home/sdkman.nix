@@ -13,6 +13,21 @@ let
   zipBin = "${pkgs.zip}/bin/zip";
   tarBin = "${pkgs.gnutar}/bin/tar";
   sedBin = "${pkgs.gnused}/bin/sed";
+
+  sdkmanConfig = pkgs.writeText "sdkman-config" ''
+    sdkman_auto_answer=false
+    sdkman_selfupdate_feature=true
+    sdkman_insecure_ssl=false
+    sdkman_curl_connect_timeout=5
+    sdkman_curl_continue=true
+    sdkman_curl_max_time=10
+    sdkman_beta_channel=false
+    sdkman_debug_mode=false
+    sdkman_colour_enable=true
+    sdkman_auto_env=true
+    sdkman_auto_complete=true
+  '';
+
   installSdkman = pkgs.writeShellScript "install-sdkman" ''
     set -euo pipefail
 
@@ -31,6 +46,13 @@ let
     export PATH="${pkgs.curl}/bin:${pkgs.unzip}/bin:${pkgs.zip}/bin:${pkgs.gnutar}/bin:${pkgs.gnused}/bin:''${PATH:-}"
     "${curlBin}" -fsSL "${installerUrl}" | "${bashBin}"
   '';
+
+  configureSdkman = pkgs.writeShellScript "configure-sdkman" ''
+    set -euo pipefail
+    export PATH="${pkgs.coreutils}/bin:''${PATH:-}"
+    mkdir -p "${sdkmanDir}/etc"
+    cat "${sdkmanConfig}" > "${sdkmanDir}/etc/config"
+  '';
 in
 {
   home.sessionVariables.SDKMAN_DIR = sdkmanDir;
@@ -39,9 +61,14 @@ in
     ${installSdkman}
   '';
 
+  home.activation.configureSdkman = lib.hm.dag.entryAfter [ "installSdkman" ] ''
+    ${configureSdkman}
+  '';
+
   programs.zsh.initContent = lib.mkAfter ''
     export SDKMAN_DIR=${sdkmanDir}
     if [ -s "${sdkmanDir}/bin/sdkman-init.sh" ]; then
+      sdkman_auto_env=true
       source "${sdkmanDir}/bin/sdkman-init.sh"
     fi
   '';
