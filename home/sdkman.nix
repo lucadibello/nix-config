@@ -55,20 +55,19 @@ let
   '';
 in
 {
-  home.sessionVariables.SDKMAN_DIR = sdkmanDir;
-
-  home.activation.installSdkman = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-    ${installSdkman}
-  '';
-
-  home.activation.configureSdkman = lib.hm.dag.entryAfter [ "installSdkman" ] ''
-    ${configureSdkman}
-  '';
+  home = {
+    sessionVariables.SDKMAN_DIR = sdkmanDir;
+    activation.installSdkman = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+      ${installSdkman}
+    '';
+    activation.configureSdkman = lib.hm.dag.entryAfter [ "installSdkman" ] ''
+      ${configureSdkman}
+    '';
+  };
 
   programs.zsh.initContent = lib.mkAfter ''
     export SDKMAN_DIR=${sdkmanDir}
     if [ -s "${sdkmanDir}/bin/sdkman-init.sh" ]; then
-      sdkman_auto_env=true
       source "${sdkmanDir}/bin/sdkman-init.sh"
     fi
   '';
