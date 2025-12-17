@@ -12,6 +12,7 @@
     ./zoxide.nix
     ./fzf.nix
     ./ghostty.nix
+    ./zed.nix
   ];
 
   home = {

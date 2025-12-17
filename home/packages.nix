@@ -25,6 +25,7 @@
       neovim
       ripgrep
       fzf
+      zed-editor
 
       # --- CLI Utilities & Modern Replacements ---
       bat
