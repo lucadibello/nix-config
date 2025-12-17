@@ -4,21 +4,21 @@
     enable = true;
 
     # Zed extensions
-    extensions = with pkgs.zed-extensions; [
-      html
-      git-firefly
-      dockerfile
-      java
-      macos-classic
-      make
-      material-icon-theme
-      latex
-      kotlin
-      docker-compose
-      csv
-      neocmake
-      comment
-      nix
+    extensions = [
+      "html"
+      "git-firefly"
+      "dockerfile"
+      "java"
+      "macos-classic"
+      "make"
+      "material-icon-theme"
+      "latex"
+      "kotlin"
+      "docker-compose"
+      "csv"
+      "neocmake"
+      "comment"
+      "nix"
     ];
 
     userSettings = {
@@ -29,7 +29,7 @@
           provider = "copilot_chat";
           model = "claude-sonnet-4.5";
         };
-        play_sound_when_agent_done = false;
+        play_sound_when_agent_done = true;
       };
 
       # Additional features
@@ -169,17 +169,6 @@
           "shift-l" = "pane::ActivateNextItem";
         };
       }
-
-      # FIXME: ensure these are correct
-      # {
-      #   context = "Editor";
-      #   bindings = {
-      #     "ctrl+tab" = "editor::Tab";
-      #     "ctrl-/" = "terminal_panel::ToggleFocus";
-      #     "cmd-i" = "assistant::InlineAssist";
-      #     "cmd-shift-i" = "agent::ToggleFocus";
-      #   };
-      # }
 
       # Toggle terminal
       {

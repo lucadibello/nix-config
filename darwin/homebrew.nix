@@ -28,7 +28,6 @@
       "docker-desktop"
       "visual-studio-code"
       "warp"
-      "zed"
 
       # ai
       "chatgpt"
