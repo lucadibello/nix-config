@@ -6,19 +6,17 @@
     # Zed extensions
     extensions = [
       "html"
-      "git-firefly"
       "dockerfile"
+      "docker-compose"
       "java"
       "macos-classic"
       "make"
       "material-icon-theme"
       "latex"
       "kotlin"
-      "docker-compose"
       "csv"
       "neocmake"
       "comment"
-      "nix"
     ];
 
     userSettings = {
@@ -38,7 +36,6 @@
       };
 
       # General settings
-      hour_format = "hour24";
       vim_mode = true;
       vim = {
         toggle_relative_line_numbers = true;
