@@ -120,7 +120,6 @@
         bindings = {
           # Files / buffers
           "space space" = "file_finder::Toggle";
-          "space ," = "workspace::QuickOpenRecentFile";
           "space f f" = "file_finder::Toggle";
           "space f p" = "project_panel::NewSearchInDirectory";
 
@@ -187,7 +186,7 @@
           "h" = "project_panel::CollapseSelectedEntry";
           "l" = "project_panel::ExpandSelectedEntry";
           "o" = "project_panel::Open";
-          "O" = "project_panel::OpenWithSystem";
+          "O" = "workspace::OpenWithSystem";
           "x" = "project_panel::Cut";
           "r" = "project_panel::Rename";
           "y" = "project_panel::Copy";
