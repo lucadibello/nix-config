@@ -57,6 +57,9 @@
 
       # --- Package Managers ---
       fnm
+
+      # --- Fonts ---
+      jetbrains-mono
     ];
   };
 }
