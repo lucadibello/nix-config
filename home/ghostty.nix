@@ -19,7 +19,7 @@
       background-opacity = 0.95;
 
       # Intialize tmux session named 'core'
-      initial-command = "${pkgs.tmux}/bin/tmux new-session -A -s core";
+      command = "${pkgs.tmux}/bin/tmux new-session -A -s core";
 
       # Enable font features font-feature = calt
       font-feature = [
