@@ -57,8 +57,8 @@
       # Icon pack
       icon_theme = {
         mode = "dark";
-        light = "material-icon-theme";
-        dark = "material-icon-theme";
+        light = "Material Icon Theme";
+        dark = "Material Icon Theme";
       };
 
       # Language-specific settings
