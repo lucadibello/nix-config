@@ -57,8 +57,24 @@
       # Icon pack
       icon_theme = {
         mode = "dark";
-        light = "Zed (Default)";
-        dark = "Zed (Default)";
+        light = "material-icon-theme";
+        dark = "material-icon-theme";
+      };
+
+      # Language-specific settings
+      languages = {
+        # nix custom formatter
+        Nix = {
+          formatter = {
+            external = {
+              command = "nixfmt";
+              arguments = [
+                "--quiet"
+                "--"
+              ];
+            };
+          };
+        };
       };
     };
 

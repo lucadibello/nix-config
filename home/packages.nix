@@ -35,6 +35,8 @@
       go-task
 
       # --- Nix Tooling ---
+      nixd
+      nil
       statix
       nixfmt
 
