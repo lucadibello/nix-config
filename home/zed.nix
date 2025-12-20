@@ -190,7 +190,7 @@
           # Refactoring
           "space c r " = "editor::Rename";
           # Chat with AI
-          "space a a" = "assistant::ToggleFocus";
+          "space a a" = "agent::ToggleFocus";
           "ctrl-\\" = "workspace::ToggleRightDock";
           "cmd-k" = "workspace::ToggleRightDock";
           "space a e" = "assistant::InlineAssist";
@@ -267,7 +267,7 @@
           # Close buffer
           "space b d" = "pane::CloseActiveItem";
           # Close inactive buffers
-          "space b q" = "pane::CloseInactiveItems";
+          "space b q" = "pane::CloseOtherItems";
           # New file
           "space b n" = "workspace::NewFile";
           # Search in the current buffer
