@@ -27,7 +27,9 @@
       "android-studio"
       "docker-desktop"
       "visual-studio-code"
-      "warp"
+
+      # vpn
+      "cloudflare-warp"
 
       # ai
       "chatgpt"
