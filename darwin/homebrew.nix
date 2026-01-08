@@ -18,6 +18,7 @@
       "anki"
       "basictex"
       "nextcloud"
+      "google-drive"
       "notion"
       "shortcat"
       "utm"
