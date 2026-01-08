@@ -38,6 +38,7 @@
 
       # browsers
       "zen"
+      "orion"
     ];
   };
 }
