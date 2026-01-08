@@ -87,6 +87,7 @@
           alt-shift-1 = "move-node-to-workspace 1";
           alt-shift-2 = "move-node-to-workspace 2";
           alt-shift-3 = "move-node-to-workspace 3";
+
           alt-shift-4 = "move-node-to-workspace 4";
           alt-shift-5 = "move-node-to-workspace 5";
           alt-shift-6 = "move-node-to-workspace 6";
@@ -180,6 +181,18 @@
         esc = "mode main";
         enter = "mode main";
       };
+
+      # Force assignment to monitors
+      workspace-to-monitor-force-assignment = {
+        "1" = "primary";
+        "2" = "primary";
+        "3" = "primary";
+
+        "4" = "secondary";
+        "5" = "secondary";
+        "6" = "secondary";
+      };
+
       on-window-detected = [
         # ---------- Browsers → workspace B ----------
         {
