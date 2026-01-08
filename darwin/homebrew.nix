@@ -38,6 +38,9 @@
 
       # browsers
       "zen"
+
+      # NOTE: to fix aerospace issues: Settings -> Browsing -> disable Link Previews from all apps
+      # (source: https://github.com/nikitabobko/AeroSpace/discussions/989#discussioncomment-14406284)
       "orion"
     ];
   };
