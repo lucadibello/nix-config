@@ -51,6 +51,7 @@
 
       # keyboard-centric workflow
       "shortcat"
+      "karabiner-elements"
     ];
   };
 }
