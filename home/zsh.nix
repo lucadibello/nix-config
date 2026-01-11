@@ -25,7 +25,7 @@
         gg = "git log --all --decorate --oneline --graph";
       };
 
-      initExtra = ''
+      initContent = ''
         function karabiner_import() {
           if [ ! -f "$1" ]; then
             echo "[ERROR] File not found: $1"
