@@ -6,6 +6,12 @@
       upgrade = true;
       cleanup = "zap";
     };
+
+    brews = [
+      # ai
+      "opencode"
+    ];
+
     casks = [
       # social
       "microsoft-teams"
