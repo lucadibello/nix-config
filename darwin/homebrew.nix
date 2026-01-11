@@ -49,8 +49,9 @@
       # browsers
       "zen"
 
-      # additional tools
+      # keyboard-centric workflow
       "shortcat"
+      "karabiner-elements"
     ];
   };
 }
