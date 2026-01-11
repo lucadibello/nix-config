@@ -56,6 +56,7 @@
       codex
       gemini-cli
       claude-code
+      opencode
 
       # --- Package Managers ---
       fnm
