@@ -13,16 +13,20 @@
 
       # academic writing
       "quarto"
-
-      # utility
-      "anki"
       "basictex"
+
+      # note-taking and study
+      "anki"
+      "notion"
+      "obsidian"
+      "zotero"
+
+      # cloud
       "nextcloud"
       "google-drive"
-      "notion"
-      "shortcat"
+
+      # hypervisors
       "utm"
-      "zotero"
 
       # dev
       "android-studio"
@@ -39,9 +43,8 @@
       # browsers
       "zen"
 
-      # NOTE: to fix aerospace issues: Settings -> Browsing -> disable Link Previews from all apps
-      # (source: https://github.com/nikitabobko/AeroSpace/discussions/989#discussioncomment-14406284)
-      "orion"
+      # additional tools
+      "shortcat"
     ];
   };
 }
