@@ -8,7 +8,7 @@
     ./homebrew.nix
     ./settings.nix
     ./system.nix
-    ./services.nix
+    ./services/default.nix
     inputs.home-manager.darwinModules.home-manager
   ];
 
