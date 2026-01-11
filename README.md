@@ -4,12 +4,11 @@ Modern rewrite of my old dotfiles ([lucadibello/dotfiles](https://github.com/luc
 
 ## What’s inside
 
-- `flake.nix`: entrypoint targeting host `Lucas-MacBook-Pro-16-inch` (aarch64-darwin) with shared modules and host overrides.
-- `darwin/`: nix-darwin modules (system defaults, TouchID for sudo, keyboard/caps remap, Finder tweaks, PATH/EDITOR env, Homebrew taps/casks, AeroSpace service).
-- `home/`: home-manager modules for shell (zsh + fzf/zoxide/atuin), prompt (starship), tmux (Catppuccin theme, fzf/yank plugins), Git user config, dev toolchain and CLI packages (neovim, ripgrep, lazygit, node 24, etc.), Ghostty configuration (auto tmux session, shader, font/theme).
-- `hosts/<hostname>/configuration.nix`: host-specific bits (hostname today; extend here for per-machine settings).
+- `flake.nix`: entrypoints for hosts `Lucas-MacBook-Pro-16-inch` (MacBook) and `Lucas-Mac-Mini` (Desktop).
+- `darwin/`: nix-darwin modules (system defaults, TouchID/WatchID for sudo, keyboard/caps remap, Finder tweaks, PATH/EDITOR env, Homebrew taps/casks, AeroSpace service).
+- `home/`: home-manager modules for shell (zsh + fzf/zoxide/atuin), prompt (starship), tmux (Catppuccin theme, cpu/battery/fzf/yank/pain-control plugins), Git user config, dev toolchain (fnm, sdkman, jdk21), and CLI packages (neovim, zed, lazygit, claude-code, etc.).
+- `hosts/<hostname>/configuration.nix`: host-specific settings (e.g., TouchID vs WatchID, gaming packages for Mac Mini).
 - `config/`: extra assets (e.g., Ghostty cursor shader).
-- `Makefile`: helper target to run the switch.
 
 ## Quick start (on a new Mac)
 
@@ -19,7 +18,7 @@ Modern rewrite of my old dotfiles ([lucadibello/dotfiles](https://github.com/luc
 4. Apply the system:
 
    ```bash
-   nix-switch # alias for "sudo darwin-rebuild switch --flake .<HOST_NAME>"
+   nix-switch # alias for "sudo darwin-rebuild switch --flake .#<HOST_NAME>"
    # or
    sudo darwin-rebuild switch --flake .
    ```
@@ -30,11 +29,12 @@ Modern rewrite of my old dotfiles ([lucadibello/dotfiles](https://github.com/luc
 
 - Packages: edit `home/packages.nix` for CLI tools; GUI/casks live in `darwin/homebrew.nix`.
 - Shell & prompt: tweak `home/zsh.nix` (zsh + oh-my-zsh with `git`, `vi-mode`, `tmux` plugins) and `home/starship.nix`; aliases include `nix-switch` for updating the system.
-- Window management: `darwin/services.nix` configures AeroSpace with `alt`-centric bindings (tiles/accordion layouts, workspaces A–Z, Ghostty launcher on `alt-enter`).
-- Terminal: `home/ghostty.nix` sets font/theme, enables zsh integration, and auto-starts a `tmux` session.
-- System defaults: adjust Finder/keyboard/loginwindow options in `darwin/system.nix` and env in `darwin/settings.nix`.
+- Window management: `darwin/services.nix` configures AeroSpace with `alt`-centric bindings (tiles/accordion layouts, workspaces A–Z/0–9, Ghostty launcher on `alt-enter`) and smart window movement rules.
+- Terminal: `home/ghostty.nix` sets font (JetBrains Mono), theme (Github Dark), custom cursor shader, zsh integration, and auto-starts a `core` tmux session.
+- System defaults: adjust Finder/keyboard/loginwindow options (e.g., Caps Lock to Escape, hidden files, no guest login) in `darwin/system.nix` and env in `darwin/settings.nix`.
+- Homebrew: `darwin/homebrew.nix` manages casks (browsers, AI tools, dev apps) and brews, with `zap` cleanup enabled.
 
 ## Update cycle
 
-- Pull latest changes, edit modules as needed, then run `sudo darwin-rebuild switch --flake .<HOST_NAME>`.
+- Pull latest changes, edit modules as needed, then run `sudo darwin-rebuild switch --flake .#<HOST_NAME>`.
 - `nix flake update` bumps inputs (`nixpkgs`, `nix-darwin`, `home-manager`) to the pinned release (`25.11` today).
