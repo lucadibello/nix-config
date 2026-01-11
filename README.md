@@ -9,18 +9,18 @@ Modern rewrite of my old dotfiles ([lucadibello/dotfiles](https://github.com/luc
 - `home/`: home-manager modules for shell (zsh + fzf/zoxide/atuin), prompt (starship), tmux (Catppuccin theme, cpu/battery/fzf/yank/pain-control plugins), Git user config, dev toolchain (fnm, sdkman, jdk21), and CLI packages (neovim, zed, lazygit, claude-code, etc.).
 - `hosts/<hostname>/configuration.nix`: host-specific settings (e.g., TouchID vs WatchID, gaming packages for Mac Mini).
 - `config/`: extra assets (e.g., Ghostty cursor shader).
+- `bootstrap.sh`: helper script to bootstrap the system (installs nix-darwin, builds flake).
 
 ## Quick start (on a new Mac)
 
-1. Install Nix with flakes enabled (e.g., Determinate/official installer). Ensure you have `nix` and `darwin-rebuild` available.
+1. Install Nix with flakes enabled (e.g., Determinate/official installer). Ensure you have `nix` available.
 2. Clone this repo to `~/Developer/nix-config` (or adjust paths accordingly).
 3. (Optional) Add a host entry under `hosts/<your-host>/configuration.nix` and point `flake.nix` to it if your machine name differs from `Lucas-MacBook-Pro-16-inch`.
 4. Apply the system:
 
    ```bash
-   nix-switch # alias for "sudo darwin-rebuild switch --flake .#<HOST_NAME>"
-   # or
-   sudo darwin-rebuild switch --flake .
+   chmod +x bootstrap.sh
+   ./bootstrap.sh
    ```
 
 5. Log out/in (or reboot) to let macOS defaults and services settle.
@@ -36,5 +36,12 @@ Modern rewrite of my old dotfiles ([lucadibello/dotfiles](https://github.com/luc
 
 ## Update cycle
 
-- Pull latest changes, edit modules as needed, then run `sudo darwin-rebuild switch --flake .#<HOST_NAME>`.
+- Pull latest changes, edit modules as needed, then run:
+
+  ```bash
+  nix-switch
+  ```
+
+  > **Note**: This is an alias for `sudo darwin-rebuild switch --flake ~/Developer/nix-config#<HOST_NAME>`, automatically configured in `zsh`.
+
 - `nix flake update` bumps inputs (`nixpkgs`, `nix-darwin`, `home-manager`) to the pinned release (`25.11` today).
