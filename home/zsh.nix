@@ -24,16 +24,6 @@
         gcof = "git branch -a --sort=-committerdate | fzf --tac | sed 's/\\*//' | sed 's/remotes\/origin\///' | tr -d ' ' | xargs git checkout";
         gg = "git log --all --decorate --oneline --graph";
       };
-
-      initContent = ''
-        function karabiner_import() {
-          if [ ! -f "$1" ]; then
-            echo "[ERROR] File not found: $1"
-            return 1
-          fi
-          open "karabiner://karabiner/assets/complex_modifications/import?url=file://$(realpath "$1")"
-        }
-      '';
     };
   };
 }
