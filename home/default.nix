@@ -13,7 +13,6 @@
     ./fzf.nix
     ./ghostty.nix
     ./zed.nix
-    ./karabiner.nix
     ./opencode.nix
   ];
 
