@@ -19,6 +19,14 @@
       "comment"
     ];
 
+    # configure opencode agent server
+    agent_servers = {
+      "OpenCode" = {
+        "command" = "opencode";
+        "args" = [ "acp" ];
+      };
+    };
+
     # User settings
     userSettings = {
       # AI
