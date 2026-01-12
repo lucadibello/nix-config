@@ -8,7 +8,7 @@
 
       mcp = {
         # Docker MCP gateway configuration
-        "mcp_docker" = {
+        "MCP_DOCKER" = {
           type = "local";
           command = [
             "docker"
