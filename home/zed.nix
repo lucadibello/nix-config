@@ -19,14 +19,6 @@
       "comment"
     ];
 
-    # configure opencode agent server
-    agent_servers = {
-      "OpenCode" = {
-        "command" = "opencode";
-        "args" = [ "acp" ];
-      };
-    };
-
     # User settings
     userSettings = {
       # AI
@@ -37,6 +29,14 @@
           model = "claude-sonnet-4.5";
         };
         play_sound_when_agent_done = true;
+      };
+
+      # configure opencode agent server
+      agent_servers = {
+        "OpenCode" = {
+          "command" = "opencode";
+          "args" = [ "acp" ];
+        };
       };
 
       # Additional features
