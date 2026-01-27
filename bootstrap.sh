@@ -10,8 +10,8 @@ echo "Starting nix-darwin autoconfiguration..."
 # Check if Nix is installed
 if ! command -v nix &>/dev/null; then
   echo "Error: Nix is not installed."
-  echo "Please install Nix first. You can use the Determinate Systems installer:"
-  echo "  curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install"
+  echo "Please install Lix first. You can use the Lix Installer:"
+  echo "  curl -sSf -L https://install.lix.systems/lix | sh -s -- install"
   exit 1
 fi
 
