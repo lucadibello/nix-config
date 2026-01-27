@@ -14,7 +14,7 @@
 
       # set terminal looks
       font-size = 20;
-      font-family = "JetBrains Mono";
+      font-family = "JetBrainsMono Nerd Font";
       theme = "Github Dark";
       background-opacity = 0.95;
 
