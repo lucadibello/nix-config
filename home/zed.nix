@@ -68,6 +68,13 @@ _: {
         dark = "Material Icon Theme";
       };
 
+      # Terminal settings
+      terminal = {
+        font_family = "JetBrainsMono Nerd Font";
+        font_size = 17;
+        line_height = "comfortable";
+      };
+
       # Language-specific settings
       languages = {
         # nix custom formatter
