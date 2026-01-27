@@ -30,6 +30,13 @@
 
           set -g @catppuccin_flavour "mocha"
           set -g @catppuccin_window_status_style "rounded"
+          set -g @catppuccin_icon_window_last "󰖰 "
+          set -g @catppuccin_icon_window_current "󰖯 "
+          set -g @catppuccin_icon_window_zoom "󰁌 "
+          set -g @catppuccin_icon_window_mark "󰃀 "
+          set -g @catppuccin_icon_window_silent "󰂛 "
+          set -g @catppuccin_icon_window_activity "󱅫 "
+          set -g @catppuccin_icon_window_bell "󰂞 "
         '';
       }
       {
@@ -61,6 +68,9 @@
 
     # -- Custom Bindings & Extra Config --
     extraConfig = ''
+      # Status bar position
+      set -g status-position top
+
       # Terminal features
       set -sag terminal-features ",*:RGB"
       set -sag terminal-features ",*:usstyle"
@@ -68,7 +78,7 @@
 
       # General behavior
       set -sg repeat-time 600
-      set -sg escape-time 0
+      set -sg escape-time 10 # not 0 since it would break some key combos
       set -s focus-events on
       setw -g automatic-rename on
       set -g renumber-windows on
