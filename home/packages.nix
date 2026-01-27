@@ -32,6 +32,8 @@
       eza
       zoxide
       atuin
+      yazi
+      mise
       go-task
 
       # --- Nix Tooling ---
@@ -47,7 +49,6 @@
       # --- Runtimes, Build Tools & Documentation ---
       maven
       pandoc
-      jdk21_headless
 
       # --- System Monitoring ---
       btop
@@ -62,6 +63,8 @@
 
       # --- Fonts ---
       jetbrains-mono
+      # install nerd font variant for terminal icons
+      (pkgs.nerd-fonts.jetbrains-mono)
     ];
   };
 }
