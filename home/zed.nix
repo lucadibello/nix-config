@@ -94,6 +94,7 @@ _: {
 
     # User tasks
     userTasks = [
+      # Git management
       {
         "label" = "lazygit";
         "command" = "lazygit";
@@ -104,7 +105,154 @@ _: {
         "reveal_target" = "center";
         "hide" = "always";
         "shell" = "system";
-        "tags" = [ ];
+        "tags" = [ "git" ];
+      }
+
+      # Docker management
+      {
+        "label" = "lazydocker";
+        "command" = "lazydocker";
+        "use_new_terminal" = false;
+        "allow_concurrent_runs" = false;
+        "reveal" = "always";
+        "reveal_target" = "center";
+        "hide" = "always";
+        "shell" = "system";
+        "tags" = [ "docker" ];
+      }
+
+      # File navigation
+      {
+        "label" = "yazi file manager";
+        "command" = "yazi";
+        "use_new_terminal" = false;
+        "allow_concurrent_runs" = false;
+        "reveal" = "always";
+        "reveal_target" = "center";
+        "hide" = "on_exit";
+        "shell" = "system";
+        "tags" = [ "navigation" ];
+      }
+
+      # System monitoring
+      {
+        "label" = "btop system monitor";
+        "command" = "btop";
+        "use_new_terminal" = false;
+        "allow_concurrent_runs" = false;
+        "reveal" = "always";
+        "reveal_target" = "center";
+        "hide" = "on_exit";
+        "shell" = "system";
+        "tags" = [ "monitoring" ];
+      }
+
+      # Nix development
+      {
+        "label" = "nix build";
+        "command" = "nix build";
+        "use_new_terminal" = false;
+        "allow_concurrent_runs" = false;
+        "reveal" = "always";
+        "tags" = [ "nix" ];
+      }
+      {
+        "label" = "nix flake check";
+        "command" = "nix flake check";
+        "use_new_terminal" = false;
+        "allow_concurrent_runs" = false;
+        "reveal" = "always";
+        "tags" = [ "nix" ];
+      }
+      {
+        "label" = "statix check";
+        "command" = "statix check .";
+        "use_new_terminal" = false;
+        "allow_concurrent_runs" = false;
+        "reveal" = "always";
+        "tags" = [
+          "nix"
+          "linting"
+        ];
+      }
+
+      # Task runner (go-task)
+      {
+        "label" = "task list";
+        "command" = "task --list";
+        "use_new_terminal" = false;
+        "allow_concurrent_runs" = true;
+        "reveal" = "always";
+        "tags" = [ "tasks" ];
+      }
+      {
+        "label" = "task run";
+        "command" = "task";
+        "use_new_terminal" = false;
+        "allow_concurrent_runs" = false;
+        "reveal" = "always";
+        "tags" = [ "tasks" ];
+      }
+
+      # Mise runtime manager
+      {
+        "label" = "mise list";
+        "command" = "mise ls";
+        "use_new_terminal" = false;
+        "allow_concurrent_runs" = true;
+        "reveal" = "always";
+        "tags" = [
+          "mise"
+          "runtimes"
+        ];
+      }
+      {
+        "label" = "mise install";
+        "command" = "mise install";
+        "use_new_terminal" = false;
+        "allow_concurrent_runs" = false;
+        "reveal" = "always";
+        "tags" = [
+          "mise"
+          "runtimes"
+        ];
+      }
+
+      # Maven build tasks
+      {
+        "label" = "maven clean install";
+        "command" = "mvn clean install";
+        "use_new_terminal" = false;
+        "allow_concurrent_runs" = false;
+        "reveal" = "always";
+        "tags" = [
+          "maven"
+          "build"
+        ];
+      }
+      {
+        "label" = "maven test";
+        "command" = "mvn test";
+        "use_new_terminal" = false;
+        "allow_concurrent_runs" = false;
+        "reveal" = "always";
+        "tags" = [
+          "maven"
+          "test"
+        ];
+      }
+
+      # Pandoc document conversion
+      {
+        "label" = "pandoc markdown to pdf";
+        "command" = "pandoc $ZED_FILE -o output.pdf";
+        "use_new_terminal" = false;
+        "allow_concurrent_runs" = true;
+        "reveal" = "always";
+        "tags" = [
+          "pandoc"
+          "document"
+        ];
       }
     ];
 
