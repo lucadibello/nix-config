@@ -48,7 +48,6 @@
 
       # browsers
       "zen"
-      "librewolf"
 
       # keyboard-centric workflow
       "shortcat"
