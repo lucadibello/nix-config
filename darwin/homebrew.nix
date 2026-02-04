@@ -49,6 +49,9 @@
       # browsers
       "zen"
 
+      # password managers
+      "bitwarden"
+
       # keyboard-centric workflow
       "shortcat"
     ];
