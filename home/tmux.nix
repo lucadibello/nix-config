@@ -78,7 +78,7 @@
 
       # General behavior
       set -sg repeat-time 600
-      set -sg escape-time 10 # not 0 since it would break some key combos
+      set -sg escape-time 0
       set -s focus-events on
       setw -g automatic-rename on
       set -g renumber-windows on
@@ -108,7 +108,7 @@
       bind -r l select-pane -R
       bind > swap-pane -D
       bind < swap-pane -U
-      bind j join-pane -h -s 2 -t 1
+      bind @ join-pane -h -s 2 -t 1
       bind B break-pane -d
 
       # Pane resizing
