@@ -61,9 +61,6 @@
       # --- Package Managers ---
       fnm
 
-      # --- browsers --
-      librewolf
-
       # --- Fonts ---
       jetbrains-mono
       # install nerd font variant for terminal icons
