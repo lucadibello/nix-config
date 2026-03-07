@@ -48,6 +48,7 @@
 
       # browsers
       "zen"
+      "vivaldi"
 
       # password managers
       "bitwarden"
