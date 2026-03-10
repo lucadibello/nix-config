@@ -10,7 +10,6 @@
     brews = [
       # ai
       "opencode"
-      "claude-code"
     ];
 
     casks = [
@@ -46,6 +45,7 @@
       # ai
       "chatgpt"
       "claude"
+      "claude-code"
 
       # browsers
       "zen"
