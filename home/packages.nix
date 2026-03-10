@@ -53,11 +53,6 @@
       # --- System Monitoring ---
       btop
 
-      # --- AI Tools ---
-      codex
-      gemini-cli
-      claude-code
-
       # --- Package Managers ---
       fnm
 
