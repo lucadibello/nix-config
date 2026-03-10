@@ -10,6 +10,7 @@
     brews = [
       # ai
       "opencode"
+      "claude-code"
     ];
 
     casks = [
