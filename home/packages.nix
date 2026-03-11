@@ -15,6 +15,9 @@
       fd
       bc
 
+      # --- interpreters ---
+      python3
+
       # --- Terminal Experience ---
       ghostty-bin
       tmux
