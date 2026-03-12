@@ -19,7 +19,6 @@
 
       # academic writing
       "quarto"
-      "basictex"
 
       # note-taking and study
       "anki"
