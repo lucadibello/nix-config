@@ -102,7 +102,6 @@
           # utilities
           xcolor
           caption
-          subcaption
           float
           csquotes
           appendix
