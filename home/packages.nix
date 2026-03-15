@@ -107,6 +107,11 @@
           appendix
           todonotes
           glossaries
+          lipsum
+
+          # fonts
+          raleway
+          fontawesome
           ;
       })
 
