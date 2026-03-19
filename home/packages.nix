@@ -79,6 +79,7 @@
           # math & science
           amsmath
           mathtools
+          mathdesign
           siunitx
           algorithms
           algorithmicx
@@ -109,9 +110,17 @@
           glossaries
           lipsum
 
+          # misc
+          xifthen
+          ifmtarg
+          sectsty
+          epigraph
+          nextpage
+
           # fonts
           raleway
           fontawesome
+          bera
           ;
       })
 
