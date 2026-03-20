@@ -14,6 +14,7 @@
       curl
       fd
       bc
+      fswatch
 
       # --- interpreters ---
       python3
