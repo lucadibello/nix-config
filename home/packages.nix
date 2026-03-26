@@ -103,6 +103,7 @@
 
           # utilities
           xcolor
+          tcolorbox
           caption
           float
           csquotes
