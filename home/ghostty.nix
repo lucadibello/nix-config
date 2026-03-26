@@ -46,6 +46,9 @@
       ];
       # Set shaders
       custom-shader = "~/.config/ghostty/shaders/cursor_blaze.glsl";
+
+      # ensure option+<key> works as expected in terminal
+      macos-option-as-alt = "left";
     };
   };
 
