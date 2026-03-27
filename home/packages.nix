@@ -31,6 +31,9 @@
       fzf
       zed-editor
 
+      # -- Documentation & Note-taking ---
+      sioyek
+
       # --- CLI Utilities & Modern Replacements ---
       bat
       eza
