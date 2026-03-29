@@ -106,8 +106,8 @@
       bind -r j select-pane -D
       bind -r k select-pane -U
       bind -r l select-pane -R
-      bind > swap-pane -D
-      bind < swap-pane -U
+      bind > swap-window -t +1 \; select-window -t +1
+      bind < swap-window -t -1 \; select-window -t -1
       bind @ join-pane -h -s 2 -t 1
       bind B break-pane -d
 
