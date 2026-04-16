@@ -432,6 +432,8 @@ _: {
           "space b q" = "pane::CloseOtherItems";
           # New file
           "space b n" = "workspace::NewFile";
+          # Pin/unpin tab
+          "space b p" = "pane::TogglePinTab";
           # Search in the current buffer
           "space s b" = "vim::Search";
           # Search in all the files
