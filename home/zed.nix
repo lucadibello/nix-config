@@ -358,6 +358,10 @@ _: {
           "space a e" = "assistant::InlineAssist";
           "cmd-l" = "assistant::InlineAssist";
           "space a t" = "workspace::ToggleRightDock";
+          # Surround
+          "space g s a" = "vim::PushAddSurrounds";
+          "space g s d" = "vim::PushDeleteSurrounds";
+          "space g s r" = "vim::PushChangeSurrounds";
           # Git
           "space g g" = [
             "task::Spawn"
