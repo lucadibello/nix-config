@@ -1,6 +1,8 @@
 _: {
   programs.zed-editor = {
     enable = true;
+    # do not install zed from home manager, as we are using brew
+    package = null;
 
     # Zed extensions
     extensions = [
@@ -22,25 +24,26 @@ _: {
     userSettings = {
       # AI
       agent = {
-        always_allow_tool_actions = false;
+        dock = "right";
         default_model = {
           provider = "copilot_chat";
           model = "claude-sonnet-4.5";
         };
-        play_sound_when_agent_done = true;
+        play_sound_when_agent_done = "always";
       };
 
       # configure opencode agent server
       agent_servers = {
         "OpenCode" = {
+          "type" = "custom";
           "command" = "opencode";
           "args" = [ "acp" ];
         };
       };
 
       # Additional features
-      features = {
-        edit_prediction_provider = "copilot";
+      edit_predictions = {
+        provider = "copilot";
       };
 
       # General settings

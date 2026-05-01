@@ -34,6 +34,7 @@
       "utm"
 
       # dev
+      "zed"
       "android-studio"
       "docker-desktop"
       "visual-studio-code"
