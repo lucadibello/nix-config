@@ -10,6 +10,8 @@
     brews = [
       # ai
       "opencode"
+      # airdrop-cli (https://github.com/vldmrkl/airdrop-cli)
+      "vldmrkl/formulae/airdrop-cli"
     ];
 
     casks = [
