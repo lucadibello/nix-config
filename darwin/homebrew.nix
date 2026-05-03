@@ -48,6 +48,7 @@
       "chatgpt"
       "claude"
       "claude-code"
+      "google-gemini"
 
       # browsers
       "zen"
