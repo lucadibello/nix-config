@@ -4,24 +4,40 @@ _: {
     # do not install zed from home manager, as we are using brew
     package = null;
 
-    # Zed extensions
-    extensions = [
-      "html"
-      "dockerfile"
-      "docker-compose"
-      "java"
-      "macos-classic"
-      "make"
-      "material-icon-theme"
-      "latex"
-      "kotlin"
-      "csv"
-      "neocmake"
-      "comment"
-    ];
-
     # User settings
     userSettings = {
+      cli_default_open_behavior = "new_window";
+      use_system_window_tabs = false;
+
+      project_panel.dock = "left";
+      outline_panel.dock = "left";
+      collaboration_panel.dock = "left";
+      git_panel.dock = "left";
+
+      title_bar.show_menus = false;
+      minimap.show = "never";
+
+      tabs = {
+        file_icons = false;
+        git_status = false;
+      };
+
+      # Extensions (auto-install)
+      auto_install_extensions = {
+        comment = true;
+        csv = true;
+        docker-compose = true;
+        dockerfile = true;
+        html = true;
+        java = true;
+        kotlin = true;
+        latex = true;
+        macos-classic = true;
+        make = true;
+        material-icon-theme = true;
+        neocmake = true;
+      };
+
       # AI
       agent = {
         dock = "right";
@@ -32,12 +48,16 @@ _: {
         play_sound_when_agent_done = "always";
       };
 
-      # configure opencode agent server
+      # Agent servers
       agent_servers = {
-        "OpenCode" = {
-          "type" = "custom";
-          "command" = "opencode";
-          "args" = [ "acp" ];
+        "gemini" = {
+          "type" = "registry";
+        };
+        "claude-acp" = {
+          "type" = "registry";
+        };
+        "opencode" = {
+          "type" = "registry";
         };
       };
 
@@ -61,7 +81,7 @@ _: {
       theme = {
         mode = "dark";
         light = "macOS Classic Light";
-        dark = "macOS Classic Dark";
+        dark = "GitHub Dark";
       };
 
       # Icon pack
