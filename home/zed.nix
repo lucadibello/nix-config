@@ -96,6 +96,15 @@ _: {
         font_family = "JetBrainsMono Nerd Font";
         font_size = 17;
         line_height = "comfortable";
+        shell = {
+          with_arguments = {
+            program = "/bin/zsh";
+            args = [
+              "-c"
+              "tmux new-session -A -s \"$(basename \"\$PWD\")\""
+            ];
+          };
+        };
       };
 
       # Language-specific settings
