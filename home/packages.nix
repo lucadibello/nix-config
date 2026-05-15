@@ -42,6 +42,7 @@
       yazi
       mise
       go-task
+      gh
 
       # --- Nix Tooling ---
       nixd
