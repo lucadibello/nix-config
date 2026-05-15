@@ -10,17 +10,14 @@
     brews = [
       # ai
       "opencode"
-      # airdrop-cli (https://github.com/vldmrkl/airdrop-cli)
-      "vldmrkl/formulae/airdrop-cli"
+      # neovim
+      "neovim"
     ];
 
     casks = [
       # social
       "microsoft-teams"
       "whatsapp"
-
-      # editors
-      "neovim"
 
       # academic writing
       "quarto"
