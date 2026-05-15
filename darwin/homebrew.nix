@@ -19,6 +19,9 @@
       "microsoft-teams"
       "whatsapp"
 
+      # editors
+      "neovim"
+
       # academic writing
       "quarto"
 

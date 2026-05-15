@@ -26,7 +26,6 @@
       tmuxinator
 
       # --- Editor & Search ---
-      neovim
       ripgrep
       fzf
       zed-editor
