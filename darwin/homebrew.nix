@@ -48,7 +48,7 @@
       "chatgpt"
       "claude"
       "claude-code"
-      "google-gemini"
+      "antigravity-cli"
 
       # browsers
       "zen"
