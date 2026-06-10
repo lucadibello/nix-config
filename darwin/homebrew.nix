@@ -19,6 +19,9 @@
       "microsoft-teams"
       "whatsapp"
 
+      # other microslop software
+      "microsoft-powerpoint"
+
       # academic writing
       "quarto"
 
