@@ -52,8 +52,7 @@
       "antigravity-cli"
 
       # browsers
-      "zen"
-      "vivaldi"
+      "helium-browser"
 
       # password managers
       "bitwarden"
