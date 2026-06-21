@@ -8,8 +8,6 @@
     };
 
     brews = [
-      # ai
-      "opencode"
       # neovim
       "neovim"
     ];

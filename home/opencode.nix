@@ -1,10 +1,11 @@
+{ pkgs, ... }:
 {
   programs.opencode = {
-    package = null; # NOTE: installed via homebrew
+    package = pkgs.opencode;
     enable = true;
 
     # custom rules
-    rules = ''
+    context = ''
       # OpenCode Agent Instructions
 
       ## 1. Core Identity & Protocol
@@ -64,11 +65,15 @@
       - **Missing Info:** If `context7` does not return the necessary documentation, explicitly state: *"I cannot find documentation for [Library]. Please verify the name or provide context."*
     '';
 
+    # TUI-specific settings (moved out of settings in v1.2.15+)
+    tui = {
+      theme = "kanagawa";
+    };
+
     # settings
     settings = {
       # general
       autoupdate = true;
-      theme = "kanagawa";
 
       # custom MCP servers
       mcp = {
