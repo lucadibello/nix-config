@@ -52,6 +52,7 @@
       "antigravity-cli"
 
       # browsers
+      "zen"
       "helium-browser"
 
       # password managers
