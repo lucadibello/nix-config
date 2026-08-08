@@ -50,6 +50,7 @@
       "claude"
       "claude-code"
       "antigravity-cli"
+      "lm-studio"
 
       # browsers
       "zen"
