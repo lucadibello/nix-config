@@ -10,6 +10,7 @@
     brews = [
       # neovim
       "neovim"
+      "opencode"
     ];
 
     casks = [

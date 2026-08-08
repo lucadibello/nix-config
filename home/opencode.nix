@@ -1,8 +1,8 @@
-{ pkgs, ... }:
 {
   programs.opencode = {
-    package = pkgs.opencode;
     enable = true;
+    # Do not install opencode from home-manager, as we are using brew formula
+    package = null;
 
     # custom rules
     context = ''
