@@ -8,9 +8,10 @@
     };
 
     brews = [
-      # neovim
       "neovim"
       "opencode"
+      "llmfit"
+      "ollama"
     ];
 
     casks = [
@@ -32,7 +33,6 @@
 
       # cloud
       "nextcloud"
-      "google-drive"
 
       # hypervisors
       "utm"
@@ -47,11 +47,7 @@
       "cloudflare-warp"
 
       # ai
-      "chatgpt"
-      "claude"
-      "claude-code"
       "antigravity-cli"
-      "lm-studio"
 
       # browsers
       "zen"
@@ -62,6 +58,9 @@
 
       # keyboard-centric workflow
       "shortcat"
+
+      # gaming
+      "steam"
     ];
   };
 }
