@@ -1,8 +1,11 @@
+{ pkgs, ... }:
+
 {
   programs.opencode = {
     enable = true;
     # Do not install opencode from home-manager, as we are using brew formula
-    package = null;
+    # package = null triggers a bug in home-manager's opencode module (versionAtLeast null)
+    package = pkgs.runCommand "opencode-dummy" { version = "1.2.15"; } "mkdir -p $out";
 
     # custom rules
     context = ''
