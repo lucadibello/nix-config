@@ -94,6 +94,27 @@
           enabled = true;
         };
       };
+
+      # local model provider
+      provider = {
+        ollama = {
+          npm = "@ai-sdk/openai-compatible";
+          name = "Ollama";
+          options = {
+            baseURL = "http://localhost:11434/v1";
+          };
+          models = {
+            "deepseek-r1:14b" = {
+              name = "deepseek-r1:14b";
+              reasoning = true;
+            };
+            "qwen2.5-coder:3b" = {
+              name = "qwen2.5-coder:3b";
+              tool_call = true;
+            };
+          };
+        };
+      };
     };
   };
 }
