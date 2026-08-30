@@ -112,6 +112,11 @@
               name = "qwen2.5-coder:3b";
               tool_call = true;
             };
+            "gemma4:12b" = {
+              name = "gemma4:12b";
+              tool_call = true;
+              reasoning = true;
+            };
           };
         };
       };
