@@ -12,6 +12,7 @@
       "opencode"
       "llmfit"
       "ollama"
+      "mole"
     ];
 
     casks = [
@@ -39,7 +40,6 @@
 
       # dev
       "zed"
-      "android-studio"
       "docker-desktop"
       "visual-studio-code"
 
@@ -58,6 +58,9 @@
 
       # keyboard-centric workflow
       "shortcat"
+
+      # additional tooling
+      "stats"
 
       # gaming
       "steam"
