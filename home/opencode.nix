@@ -104,18 +104,22 @@
             baseURL = "http://localhost:11434/v1";
           };
           models = {
-            "deepseek-r1:14b" = {
-              name = "deepseek-r1:14b";
-              reasoning = true;
-            };
-            "qwen2.5-coder:3b" = {
-              name = "qwen2.5-coder:3b";
-              tool_call = true;
-            };
             "gemma4:12b" = {
               name = "gemma4:12b";
               tool_call = true;
               reasoning = true;
+              limit = {
+                context = 16384;
+                output = 8192;
+              };
+            };
+            "qwen3.5:9b" = {
+              name = "qwen3.5:9b";
+              tool_call = true;
+              limit = {
+                context = 64536;
+                output = 8192;
+              };
             };
           };
         };
