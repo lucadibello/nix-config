@@ -51,7 +51,6 @@
 
       # browsers
       "zen"
-      "helium-browser"
 
       # password managers
       "bitwarden"
