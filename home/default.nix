@@ -14,6 +14,7 @@
     ./ghostty.nix
     ./zed.nix
     ./opencode.nix
+    ./ntfy.nix
   ];
 
   home = {
