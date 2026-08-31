@@ -17,6 +17,13 @@ let
     MESSAGE="''${1:-''${message:-''${m:-Notification received}}}"
     TITLE="''${2:-''${title:-''${t:-lucadibello-homelab-status}}}"
 
+    # Escape leading characters that cause terminal-notifier argument parsing to fail
+    case "$MESSAGE" in
+      \[*|\(*|\{*|\'*|\"*|\-*)
+        MESSAGE="\\''${MESSAGE}"
+        ;;
+    esac
+
     if [ -n "$NOTIFIER" ]; then
       if ! "$NOTIFIER" \
         -title "$TITLE" \
