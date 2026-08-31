@@ -13,6 +13,7 @@
       "llmfit"
       "ollama"
       "mole"
+      "terminal-notifier"
     ];
 
     casks = [
