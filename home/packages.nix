@@ -56,6 +56,7 @@
       # --- Runtimes, Build Tools & Documentation ---
       maven
       cargo
+      rustc
       pandoc
       (texlive.combine {
         inherit (texlive)
