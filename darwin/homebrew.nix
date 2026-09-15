@@ -61,6 +61,7 @@
 
       # additional tooling
       "stats"
+      "openlogi"
 
       # gaming
       "steam"
