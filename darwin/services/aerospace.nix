@@ -73,7 +73,6 @@
           alt-c = "workspace C"; # chatgpt
           alt-s = "workspace S"; # social (whatsapp)
           alt-m = "workspace M"; # music
-          alt-n = "workspace N"; # notion
           alt-t = "workspace T"; # terminal
           alt-w = "workspace W"; # work
           alt-u = "workspace U"; # utility
@@ -96,7 +95,6 @@
           alt-shift-c = "move-node-to-workspace C"; # chatgpt
           alt-shift-s = "move-node-to-workspace S"; # social (whatsapp)
           alt-shift-m = "move-node-to-workspace M"; # music
-          alt-shift-n = "move-node-to-workspace N"; # notion
           alt-shift-t = "move-node-to-workspace T"; # terminal
           alt-shift-w = "move-node-to-workspace W"; # work
           alt-shift-u = "move-node-to-workspace U"; # utility
