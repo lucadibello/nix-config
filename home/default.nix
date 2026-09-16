@@ -7,7 +7,8 @@
     ./fnm.nix
     ./zsh.nix
     ./starship.nix
-    ./tmux.nix
+    # ./tmux.nix # Temporarily disabled in favor of zellij
+    ./zellij.nix
     ./atuin.nix
     ./zoxide.nix
     ./fzf.nix

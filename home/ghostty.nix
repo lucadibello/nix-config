@@ -18,8 +18,8 @@
       theme = "Github Dark";
       background-opacity = 0.95;
 
-      # Intialize tmux session named 'core'
-      command = "${pkgs.tmux}/bin/tmux new-session -A -s core";
+      # Initialize zellij session named 'core'
+      command = "${pkgs.zellij}/bin/zellij attach -c core";
 
       # Enable font features font-feature = calt
       font-feature = [

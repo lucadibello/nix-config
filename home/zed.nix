@@ -101,7 +101,7 @@ _: {
             program = "/bin/zsh";
             args = [
               "-c"
-              "tmux new-session -A -s \"$(basename \"\$PWD\")\""
+              "zellij attach -c \"$(basename \"\$PWD\")\""
             ];
           };
         };

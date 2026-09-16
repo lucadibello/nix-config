@@ -12,7 +12,7 @@
         plugins = [
           "git"
           "vi-mode"
-          "tmux"
+          # "tmux" # Temporarily disabled
         ];
       };
 
@@ -23,7 +23,8 @@
           "sudo darwin-rebuild switch --flake ~/Developer/nix-config#${darwinConfig.networking.hostName}";
         gcof = "git branch -a --sort=-committerdate | fzf --tac | sed 's/\\*//' | sed 's/remotes\/origin\///' | tr -d ' ' | xargs git checkout";
         gg = "git log --all --decorate --oneline --graph";
-        mux = "tmuxinator";
+        # mux = "tmuxinator"; # Temporarily disabled
+        zj = "zellij";
       };
     };
   };

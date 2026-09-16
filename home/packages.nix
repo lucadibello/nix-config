@@ -21,9 +21,10 @@
 
       # --- Terminal Experience ---
       ghostty-bin
-      tmux
+      # tmux # Temporarily disabled
       starship
-      tmuxinator
+      # tmuxinator # Temporarily disabled
+      zellij
 
       # --- Editor & Search ---
       ripgrep
@@ -55,8 +56,7 @@
 
       # --- Runtimes, Build Tools & Documentation ---
       maven
-      cargo
-      rustc
+      rustup
       pandoc
       (texlive.combine {
         inherit (texlive)
