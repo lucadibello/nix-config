@@ -65,6 +65,7 @@
 
       # gaming
       "steam"
+      "discord"
     ];
   };
 }
