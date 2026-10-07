@@ -75,7 +75,6 @@
           alt-m = "workspace M"; # music
           alt-t = "workspace T"; # terminal
           alt-w = "workspace W"; # work
-          alt-u = "workspace U"; # utility
           alt-g = "workspace G"; # gaming
 
           # additonal workspaces
@@ -97,7 +96,6 @@
           alt-shift-m = "move-node-to-workspace M"; # music
           alt-shift-t = "move-node-to-workspace T"; # terminal
           alt-shift-w = "move-node-to-workspace W"; # work
-          alt-shift-u = "move-node-to-workspace U"; # utility
           alt-shift-g = "move-node-to-workspace G"; # gaming
           alt-shift-q = "move-node-to-workspace Q";
 
@@ -370,7 +368,7 @@
           run = [ "move-node-to-workspace W" ];
         }
         # Note: Docker is listed twice in your original list (Work and Utilities).
-        # I kept it here and moved the second instance to Utilities (U) below.
+        # I kept it here and moved the second instance to Utilities (1) below.
         {
           "if" = {
             app-id = "com.docker.docker";
@@ -378,42 +376,42 @@
           run = [ "move-node-to-workspace W" ];
         }
 
-        # ---------- Utilities → workspace U ----------
+        # ---------- Utilities → workspace 1 ----------
         {
           "if" = {
             app-id = "com.apple.finder";
           };
-          run = [ "move-node-to-workspace U" ];
+          run = [ "move-node-to-workspace 1" ];
         }
         {
           "if" = {
             app-id = "com.apple.Preview";
           };
-          run = [ "move-node-to-workspace U" ];
+          run = [ "move-node-to-workspace 1" ];
         }
         {
           "if" = {
             app-id = "com.apple.ActivityMonitor";
           };
-          run = [ "move-node-to-workspace U" ];
+          run = [ "move-node-to-workspace 1" ];
         }
         {
           "if" = {
             app-id = "com.apple.DiskUtility";
           };
-          run = [ "move-node-to-workspace U" ];
+          run = [ "move-node-to-workspace 1" ];
         }
         {
           "if" = {
             app-id = "com.apple.systempreferences";
           }; # System Settings
-          run = [ "move-node-to-workspace U" ];
+          run = [ "move-node-to-workspace 1" ];
         }
         {
           "if" = {
             app-id = "com.docker.docker";
           };
-          run = [ "move-node-to-workspace U" ];
+          run = [ "move-node-to-workspace 1" ];
         }
       ];
     };
