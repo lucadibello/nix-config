@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   programs.tmux = {
-    enable = false; # Temporarily disabled in favor of zellij
+    enable = true;
     # -- General Settings --
     shell = "${pkgs.zsh}/bin/zsh";
     terminal = "tmux-256color";

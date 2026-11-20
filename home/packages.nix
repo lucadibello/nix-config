@@ -21,9 +21,8 @@
 
       # --- Terminal Experience ---
       ghostty-bin
-      # tmux # Temporarily disabled
+      tmux
       starship
-      # tmuxinator # Temporarily disabled
       zellij
 
       # --- Editor & Search ---

@@ -12,7 +12,7 @@ let
 in
 {
   programs.zellij = {
-    enable = true;
+    enable = false; # Temporarily disabled in favor of tmux
 
     settings = {
       # Visual & Theme

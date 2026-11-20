@@ -92,6 +92,22 @@ _: {
       };
 
       # Terminal settings
+      # terminal = {
+      #   font_family = "JetBrainsMono Nerd Font";
+      #   font_size = 17;
+      #   line_height = "comfortable";
+      #   shell = {
+      #     with_arguments = {
+      #       program = "/bin/zsh";
+      #       args = [
+      #         "-c"
+      #         "tmux attach -c \"$(basename \"\$PWD\")\""
+      #       ];
+      #     };
+      #   };
+      # };
+
+      # Terminal settings
       terminal = {
         font_family = "JetBrainsMono Nerd Font";
         font_size = 17;
@@ -101,7 +117,7 @@ _: {
             program = "/bin/zsh";
             args = [
               "-c"
-              "zellij attach -c \"$(basename \"\$PWD\")\""
+              "tmux new-session -A -s \"$(basename \"\$PWD\")\""
             ];
           };
         };

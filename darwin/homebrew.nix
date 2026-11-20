@@ -49,6 +49,7 @@
 
       # ai
       "antigravity-cli"
+      "claude-code"
 
       # browsers
       "zen"

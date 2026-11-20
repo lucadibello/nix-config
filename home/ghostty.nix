@@ -19,7 +19,10 @@
       background-opacity = 0.95;
 
       # Initialize zellij session named 'core'
-      command = "${pkgs.zellij}/bin/zellij attach -c core";
+      # command = "${pkgs.zellij}/bin/zellij attach -c core";
+
+      # Initialize tmux session named 'core'
+      command = "${pkgs.tmux}/bin/tmux new-session -A -s core";
 
       # Enable font features font-feature = calt
       font-feature = [
@@ -44,8 +47,9 @@
         "title"
         "sudo"
       ];
+
       # Set shaders
-      custom-shader = "~/.config/ghostty/shaders/cursor_blaze.glsl";
+      # custom-shader = "~/.config/ghostty/shaders/cursor_blaze.glsl";
 
       # ensure option+<key> works as expected in terminal
       macos-option-as-alt = "left";
