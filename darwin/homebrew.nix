@@ -69,4 +69,12 @@
       "discord"
     ];
   };
+
+  # session variables
+  launchd.user.envVariables = {
+    OLLAMA_KEEP_ALIVE = "1h"; # default unloads the model after 5 min idle
+    OLLAMA_NUM_PARALLEL = "2"; # separate KV caches for Duet and inline completions
+    # llama.cpp prompt cache in RAM (default 8GB): on 16GB it pushes the weights into swap
+    LLAMA_ARG_CACHE_RAM = "1024";
+  };
 }

@@ -23,13 +23,6 @@
     stateVersion = "25.11";
     sessionVariables = {
       # shared environment variables
-
-      # Ollama (read by `ollama serve`), tuned for minuet-ai + Zeta in Neovim:
-      # keep the model loaded (default unloads after 5 min idle, ~1.3s reload)
-      OLLAMA_KEEP_ALIVE = "1h";
-      # two KV-cache slots so Duet (normal mode) doesn't evict the inline
-      # completion cache (insert mode); ~0.5GB extra at a 4k context
-      OLLAMA_NUM_PARALLEL = "2";
     };
   };
 }
